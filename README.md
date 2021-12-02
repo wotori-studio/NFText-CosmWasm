@@ -17,3 +17,4 @@ for better use read this:
 ### Keep in mind
 
 - when doing `% archway deploy`, CLI looks in config.json - title. This name will be used while deployng and should be the same as generated wasm files in folder `artifacts`
+- `config.json` should be correct while deploying. If it is, successifuly deployed contracts will appear in config.json unde `deployments` key.

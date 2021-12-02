@@ -56,6 +56,6 @@
     },
     "deployments": []
   },
-  "path": "/home/wotori/git/crypto/archway/sm-contracts/increment",
+  "path": "/home/wotori/git/crypto/archway/sm-contracts/cw20",
   "type": "Increment"
 }
