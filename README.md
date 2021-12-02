@@ -11,6 +11,9 @@
 for better use read this:
 [Anatomy of a Smart Contract](https://docs.cosmwasm.com/dev-academy/develop-smart-contract/intro/)
 
-# Keep in mind
+### Useful links
+- [test-net Contantine block explorer](https://explorer.constantine-1.archway.tech/)
+
+### Keep in mind
 
 - when doing `% archway deploy`, CLI looks in config.json - title. This name will be used while deployng and should be the same as generated wasm files in folder `artifacts`
