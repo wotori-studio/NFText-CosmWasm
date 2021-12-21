@@ -10,7 +10,7 @@
 ```
 one line:
 ```
-% archway deploy --args '{"name":"TheCat", "symbol":"CAT", "minter":"archway1vkpq5jaefj4424zvjgnuejjt3ymarv6frsey66"}'
+% archway deploy --args '{"name":"Wotori-Studio", "symbol":"NFText", "minter":"archway1ykfwxpfhq779jhrnxh52pk29qw9gc0jfsfx9mw"}'
 ```
 
 #### Metadata [Standards](https://docs.opensea.io/docs/metadata-standards)
