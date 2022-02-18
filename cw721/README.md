@@ -10,7 +10,7 @@
 ```
 one line:
 ```
-% archway deploy --args '{"name":"Wotori-Studio", "symbol":"NFText", "minter":"archway1ykfwxpfhq779jhrnxh52pk29qw9gc0jfsfx9mw"}'
+% archway deploy --args '{"name":"Wotori-Studio", "symbol":"NFText", "minter":"archway1a8dq0wced6q29rppdug7yvk8ek0dsrqwe3hxcz"}'
 ```
 
 #### Metadata [Standards](https://docs.opensea.io/docs/metadata-standards)
@@ -38,7 +38,7 @@ one line:
 {
     "mint":{
         "token_id":"1",
-        "owner":"what a wonderful cat...",
+        "owner":"Owner Name",
         "token_uri":"ipfs://QmWTvKbPeWDwNQMFgbmWzciq7NNcwsQcBgV5jLNNhPNwF6"
     }
 }
@@ -52,3 +52,6 @@ OwnerOf{token_id}
 
 NftInfo(token_id)
 `% archway query contract-state smart --args '{ "nft_info":{"token_id":"1"} }'`
+
+num_tokens
+`archway query contract-state smart --args '{"num_tokens":{}} '`
