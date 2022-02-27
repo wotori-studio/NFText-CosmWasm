@@ -48,7 +48,10 @@ one line:
 
 #### Query:
 Tokens{owner}
+`archway query contract-state smart --args '{"tokens":{"owner":"archway1a8dq0wced6q29rppdug7yvk8ek0dsrqwe3hxcz"}}'`
+
 OwnerOf{token_id}
+`archway query contract-state smart --args '{"owner_of":{"token_id":"10"}}'`
 
 NftInfo(token_id)
 `% archway query contract-state smart --args '{ "nft_info":{"token_id":"1"} }'`
