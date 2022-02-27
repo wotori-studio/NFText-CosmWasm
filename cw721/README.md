@@ -56,5 +56,8 @@ OwnerOf{token_id}
 NftInfo(token_id)
 `% archway query contract-state smart --args '{ "nft_info":{"token_id":"1"} }'`
 
+AllNftInfo(token_id)
+`archway query contract-state smart --args '{ "all_nft_info":{"token_id":"1"} }'`
+
 num_tokens
 `archway query contract-state smart --args '{"num_tokens":{}} '`
