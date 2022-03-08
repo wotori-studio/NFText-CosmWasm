@@ -58,6 +58,26 @@ NftInfo(token_id)
 
 AllNftInfo(token_id)
 `archway query contract-state smart --args '{ "all_nft_info":{"token_id":"1"} }'`
+response:
+```
+{
+    "data":
+    {
+        "access":
+        {
+            "owner": "archway1a8dq0wced6q29rppdug7yvk8ek0dsrqwe3hxcz",
+            "approvals":
+            []
+        },
+        "info":
+        {
+            "token_uri": "data:application/json;base64, eyJ0aXRsZSI6IlBpbm9jY2hpbyIsImNvbnRlbnQiOiJodHRwczovL2lwZnMuaW8vaXBmcy9RbVNKenJXelRIbm9nM3hCRUxYNk1rZEF4TEVLWURzVlU5Z1hURW1aaE14NE5yIiwidHlwZSI6InRleHQifQ==",
+            "extension": null
+        }
+    }
+}
+```
+
 
 num_tokens
 `archway query contract-state smart --args '{"num_tokens":{}} '`
