@@ -12,7 +12,23 @@
       "query": "archwayd query wasm",
       "tx": "archwayd tx wasm execute"
     },
-    "deployments": []
+    "deployments": [
+      {
+        "type": "create",
+        "chainId": "constantine-1",
+        "codeId": 48
+      },
+      {
+        "type": "create",
+        "chainId": "constantine-1",
+        "codeId": 47
+      },
+      {
+        "type": "create",
+        "chainId": "constantine-1",
+        "codeId": 46
+      }
+    ]
   },
   "network": {
     "name": "constantine",
