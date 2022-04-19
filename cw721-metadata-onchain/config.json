@@ -14,19 +14,27 @@
     },
     "deployments": [
       {
-        "type": "create",
+        "type": "set-metadata",
         "chainId": "constantine-1",
-        "codeId": 48
+        "contract": "archway1snu65x9p8wa6yn20cn5j2vpsxpqa7flmhj4k0k95aujgga234k5q28p90y",
+        "contractMetadata": {
+          "developerAddress": "archway1a8dq0wced6q29rppdug7yvk8ek0dsrqwe3hxcz",
+          "rewardAddress": "archway1a8dq0wced6q29rppdug7yvk8ek0dsrqwe3hxcz",
+          "collectPremium": false,
+          "gasRebate": false
+        }
+      },
+      {
+        "type": "instantiate",
+        "chainId": "constantine-1",
+        "codeId": 85,
+        "address": "archway1snu65x9p8wa6yn20cn5j2vpsxpqa7flmhj4k0k95aujgga234k5q28p90y",
+        "admin": "archway1c00s7tz2ws5qdl409xncya6d3fj79fr0a3sjnv"
       },
       {
         "type": "create",
         "chainId": "constantine-1",
-        "codeId": 47
-      },
-      {
-        "type": "create",
-        "chainId": "constantine-1",
-        "codeId": 46
+        "codeId": 85
       }
     ]
   },

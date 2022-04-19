@@ -7,7 +7,7 @@ use cw721::{
     AllNftInfoResponse, ApprovalResponse, ApprovalsResponse, ContractInfoResponse, NftInfoResponse,
     NumTokensResponse, OperatorsResponse, OwnerOfResponse, TokensResponse,
 };
-use archway_meta_onchain::{ExecuteMsg, Extension, InstantiateMsg, MinterResponse, QueryMsg};
+use cw721_metadata_onchain::{ExecuteMsg, Extension, InstantiateMsg, MinterResponse, QueryMsg};
 
 fn main() {
     let mut out_dir = current_dir().unwrap();

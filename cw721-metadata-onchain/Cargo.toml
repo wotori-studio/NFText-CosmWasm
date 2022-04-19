@@ -1,8 +1,16 @@
 [package]
-name = "archway-meta-onchain"
-version = "0.1.0"
-authors = ["user"]
+name = "cw721-metadata-onchain"
+version = "0.13.1"
+authors = [
+  "Ethan Frey <ethanfrey@users.noreply.github.com>",
+  "Orkun Külçe <orkun@deuslabs.fi>",
+]
 edition = "2018"
+description = "Example extending CW721 NFT to store metadata on chain"
+license = "Apache-2.0"
+repository = "https://github.com/CosmWasm/cw-nfts"
+homepage = "https://cosmwasm.com"
+documentation = "https://docs.cosmwasm.com"
 
 exclude = [
   # Those files are rust-optimizer artifacts. You might want to commit them for convenience but they should not be part of the source code publication.
@@ -10,20 +18,8 @@ exclude = [
 ]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [lib]
 crate-type = ["cdylib", "rlib"]
-
-[profile.release]
-opt-level = 3
-debug = false
-rpath = false
-lto = true
-debug-assertions = false
-codegen-units = 1
-panic = 'abort'
-incremental = false
-overflow-checks = true
 
 [features]
 # for more explicit tests, cargo test --features=backtraces
@@ -40,13 +36,14 @@ optimize = """docker run --rm -v "$(pwd)":/code \
 """
 
 [dependencies]
-cosmwasm-std = "1.0.0-beta"
-cw2 = "0.11"
-cw721 = "0.11"
-cw721-base = { version = "0.11", features = ["library"] }
+cw721 = { version = "0.13.1" }
+cw721-base = { version = "0.13.1", features = [
+  "library",
+] }
+cosmwasm-std = { version = "1.0.0-beta7" }
 schemars = "0.8"
-serde = { version = "1.0", default-features = false, features = ["derive"] }
-thiserror = "1.0"
+serde = { version = "1.0.130", default-features = false, features = ["derive"] }
+thiserror = { version = "1.0.30" }
 
 [dev-dependencies]
-cosmwasm-schema = "1.0.0-beta"
+cosmwasm-schema = { version = "1.0.0-beta7" }
