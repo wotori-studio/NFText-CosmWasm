@@ -1,5 +1,29 @@
 # CW721
 
+# Manual deployment
+
+### 1 - optimize
+```
+docker run --rm -v "$(pwd)":/code -e CARGO_TERM_COLOR=always --mount type=volume,source="$(basename "$(pwd)")_cache",target=/code/target --mount type=volume,source=registry_cache,target=/usr/local/cargo/registry cosmwasm/rust-optimizer:0.12.5
+```
+
+### 2 - store
+```cmd
+archwayd tx wasm store artifacts/cw721_base.wasm --gas auto --gas-prices 0.002utorii --gas-adjustment 1.3 --from wotori --chain-id torii-1 --node https://rpc.torii-1.archway.tech:443 --broadcast-mode block
+```
+
+### 3 - Validating artifact deployed to network
+```
+archwayd query wasm code 198 --node https://rpc.constantine-1.archway.tech:443 artifacts/nftext_manager_download.wasm +6s
+Downloading wasm code to artifacts/nftext_manager_download.wasm
+```
+
+### 4 - Instantiating contract
+```
+archwayd tx wasm instantiate 198 {"name":"test"} --label nftext_manager 0.1.0 --admin archway1q35c9uzfvwv052m3k4ffv4vmld6n57uqjm0r2t --gas auto --gas-prices 0.002uconst --gas-adjustment 1.3 --from wotori --chain-id constantine-1 --node https://rpc.constantine-1.archway.tech:443 --broadcast-mode block
+```
+
+# Structures
 #### JSON encoded constructor arguments example:
 ```
 {
@@ -81,3 +105,6 @@ response:
 
 num_tokens
 `archway query contract-state smart --args '{"num_tokens":{}} '`
+
+owned tokens
+`archway query contract-state smart --args '{"tokens":{"owner":"archway1a8dq0wced6q29rppdug7yvk8ek0dsrqwe3hxcz"}}'`
