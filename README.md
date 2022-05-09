@@ -7,4 +7,4 @@ from [CosmWasm](https://github.com/CosmWasm/cosmwasm)
 ### Increment 
  from [Archway](https://github.com/archway-network/archway-templates/tree/main/increment)
 ### cw-marketplace 
-from [BlockSpace Network / Hackatom V](https://github.com/BlockscapeNetwork/hackatom_v)
+[fork](https://github.com/wotori-studio/cw-marketplace) with updated dependencies
