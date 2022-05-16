@@ -1,10 +1,9 @@
 # NFText cw smart contracts
-The contracts are used to deploy and run dApp [NFText](https://github.com/wotori-studio/NFText) to Torii test-net on [Archway](https://archway.io/).
+These contracts are used to deploy and run [NFText](https://github.com/wotori-studio/NFText) dApp to [Archway](https://archway.io/) Torii test-net.
 
-### cw20, cw20-bounding, cw721 and cw721-meta-onchain 
-from [CosmWasm](https://github.com/CosmWasm/cosmwasm)
-[cw-plus](https://github.com/CosmWasm/cw-plus) / [cw-nfts](https://github.com/CosmWasm/cw-nfts)
-### Increment 
- from [Archway](https://github.com/archway-network/archway-templates/tree/main/increment)
+### cw20-bounding, cw721 and cw721-meta-onchain 
+cloned from [CosmWasm](https://github.com/CosmWasm/cosmwasm)
+- [cw-plus](https://github.com/CosmWasm/cw-plus) 
+- [cw-nfts](https://github.com/CosmWasm/cw-nfts)
 ### cw-marketplace 
-[fork](https://github.com/wotori-studio/cw-marketplace) with updated dependencies
+The [fork](https://github.com/wotori-studio/cw-marketplace) with updated dependencies
