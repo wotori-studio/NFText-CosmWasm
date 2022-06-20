@@ -1,0 +1,2 @@
+[workspace]
+members = ["cw20-bonding", "cw721-base", "cw721-metadata-onchain"]

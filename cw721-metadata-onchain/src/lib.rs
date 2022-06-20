@@ -14,12 +14,15 @@ pub struct Trait {
 // see: https://docs.opensea.io/docs/metadata-standards
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug, Default)]
 pub struct Metadata {
-    pub nft_type: Option<String>,
-    pub ipfs_url: Option<String>,
+    pub image: Option<String>,
+    pub image_data: Option<String>,
+    pub external_url: Option<String>,
+    pub description: Option<String>,
     pub name: Option<String>,
     pub attributes: Option<Vec<Trait>>,
-    pub parent: Option<String>,
-    pub preview_url: Option<String>,
+    pub background_color: Option<String>,
+    pub animation_url: Option<String>,
+    pub youtube_url: Option<String>,
 }
 
 pub type Extension = Option<Metadata>;
@@ -93,7 +96,7 @@ mod tests {
             owner: "john".to_string(),
             token_uri: Some("https://starships.example.com/Starship/Enterprise.json".into()),
             extension: Some(Metadata {
-                preview_url: Some("https://wotori.com".into()),
+                description: Some("Spaceship with Warp Drive".into()),
                 name: Some("Starship USS Enterprise".to_string()),
                 ..Metadata::default()
             }),
