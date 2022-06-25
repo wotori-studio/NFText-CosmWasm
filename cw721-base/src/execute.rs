@@ -86,11 +86,11 @@ where
         info: MessageInfo,
         msg: MintMsg<T>,
     ) -> Result<Response<C>, ContractError> {
-        // let minter = self.minter.load(deps.storage)?;
+        let minter = self.minter.load(deps.storage)?;
 
-        // if info.sender != minter {
-        //     return Err(ContractError::Unauthorized {});
-        // }
+        if info.sender != minter {
+            return Err(ContractError::Unauthorized {});
+        }
 
         // create the token
         let token = TokenInfo {
