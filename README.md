@@ -12,5 +12,5 @@ cloned from [CosmWasm](https://github.com/CosmWasm/cosmwasm)
 
 cw-marketplace 
 ---
-The [fork](https://github.com/wotori-studio/cw-marketplace) from origina authors with updated dependencies.
+The [fork](https://github.com/wotori-studio/cw-marketplace) from original authors with updated dependencies.
 cw-marketplace also copied here for future updates in conjunction with other contracts.
