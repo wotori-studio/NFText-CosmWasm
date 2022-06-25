@@ -9,8 +9,8 @@ cw20-bonding, cw721 and cw721-meta-onchain
 cloned from [CosmWasm](https://github.com/CosmWasm/cosmwasm)
 - [cw-plus](https://github.com/CosmWasm/cw-plus) 
 - [cw-nfts](https://github.com/CosmWasm/cw-nfts)
-- 
+
 cw-marketplace 
 ---
-The [fork](https://github.com/wotori-studio/cw-marketplace) with updated dependencies.
+The [fork](https://github.com/wotori-studio/cw-marketplace) from origina authors with updated dependencies.
 cw-marketplace also copied here for future updates in conjunction with other contracts.
