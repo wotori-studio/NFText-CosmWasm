@@ -1,3 +1,4 @@
+.cargo/
 # Build results
 /target
 /artifacts
