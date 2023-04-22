@@ -1,9 +1,46 @@
 {
-  "name": "cw721",
+  "useTemplate": false,
+  "name": "cw20-bounding",
   "developer": {
     "archwayd": {
       "docker": false
     },
+    "deployments": [
+      {
+        "project": "cw20-bonding",
+        "type": "instantiate",
+        "chainId": "constantine-2",
+        "codeId": 665,
+        "txhash": "9D4F8E79D1B87BB0ECDF697A43C76CAA09C22652CB1A55AA7A4D7969B4B7AE4D",
+        "address": "archway19rrzyhhlqwp7ytmy4vgtu3wrcpannj6hhl44c2eza9h2z7xcv07qxxymne",
+        "admin": "archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9"
+      },
+      {
+        "project": "cw20-bonding",
+        "type": "instantiate",
+        "chainId": "constantine-2",
+        "codeId": 665,
+        "txhash": "A60D73025EE32679A2B105818471464AB6999A7374B176C520126495AFD30FAD",
+        "address": "archway1xgkahfngvydd6rqtpkgycscvu4t5kwaftgutsmt7n82zjdhl920q59nrn3",
+        "admin": "archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9"
+      },
+      {
+        "project": "cw20-bonding",
+        "type": "instantiate",
+        "chainId": "constantine-2",
+        "codeId": 665,
+        "txhash": "15D8B26D292E96B71A318C2CAE6926EC98C1A05C3793444784E8C3CA728799C1",
+        "address": "archway1cxvp955dqqv35wjezfx305a0mfc07j8kuhp34dughdueju4uernq3r7gyl",
+        "admin": "archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9"
+      },
+      {
+        "project": "cw20-bonding",
+        "type": "store",
+        "chainId": "constantine-2",
+        "codeId": 665,
+        "txhash": "6927A8617B973F884B5799890152705B8170310757CE94212F79C259D5766137"
+      }
+    ],
     "scripts": {
       "test": "cargo unit-test",
       "build": "cargo build",
@@ -11,52 +48,33 @@
       "wasm": "cargo wasm",
       "query": "archwayd query wasm",
       "tx": "archwayd tx wasm execute"
-    },
-    "deployments": [
-      {
-        "type": "instantiate",
-        "chainId": "torii-1",
-        "codeId": 49058,
-        "address": "archway1p3q080qp52ceq3hyt4prxevelvkhgjfgl7cwpq0xh3acxxgylcksajnu4z",
-        "admin": "archway1q35c9uzfvwv052m3k4ffv4vmld6n57uqjm0r2t"
-      },
-      {
-        "type": "create",
-        "chainId": "torii-1",
-        "codeId": 49058
-      },
-      {
-        "type": "create",
-        "chainId": "torii-1",
-        "codeId": 49054
-      }
-    ]
+    }
   },
   "network": {
-    "name": "torii",
-    "chainId": "torii-1",
+    "name": "constantine",
+    "chainId": "constantine-2",
     "type": "testnet",
     "fees": {
-      "feeDenom": "utorii"
+      "feeDenom": "uconst"
     },
     "gas": {
-      "prices": "0.002utorii",
+      "prices": "0.002uconst",
       "mode": "auto",
-      "adjustment": "1.3"
+      "adjustment": "1.5"
     },
     "wasm": {
       "bech32Hrp": "archway",
-      "archwayd": "0.0.4",
+      "archwayd": "0.1.0",
       "configDir": ".archway",
       "binary": "archwayd"
     },
     "urls": {
       "rpc": {
-        "url": "https://rpc.torii-1.archway.tech",
+        "url": "https://rpc.constantine-2.archway.tech",
         "port": 443
       },
       "faucets": [
-        "https://faucet.torii-1.archway.tech"
+        "https://faucet.constantine-2.archway.tech"
       ]
     }
   }

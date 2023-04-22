@@ -1,9 +1,28 @@
 {
-  "name": "cw721",
+  "useTemplate": false,
+  "name": "cw721-base",
   "developer": {
     "archwayd": {
       "docker": false
     },
+    "deployments": [
+      {
+        "project": "cw721-base",
+        "type": "instantiate",
+        "chainId": "constantine-2",
+        "codeId": 662,
+        "txhash": "ACBE8E184396D0255183179823CAEEF5FF51823A38A03708658A16314B12D2F8",
+        "address": "archway12jnzwwdzpljgnpu7mnuv6sm83w62kthm888qwdmd60yruwf3fufsn75zhd",
+        "admin": "archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9"
+      },
+      {
+        "project": "cw721-base",
+        "type": "store",
+        "chainId": "constantine-2",
+        "codeId": 662,
+        "txhash": "DBCBB0A4CF7837520B03563E9E3BDCEF5A0914D6727570263B2876FACEB7D9DB"
+      }
+    ],
     "scripts": {
       "test": "cargo unit-test",
       "build": "cargo build",
@@ -11,98 +30,11 @@
       "wasm": "cargo wasm",
       "query": "archwayd query wasm",
       "tx": "archwayd tx wasm execute"
-    },
-    "deployments": [
-      {
-        "type": "set-metadata",
-        "chainId": "constantine-1",
-        "codeId": 196,
-        "txhash": "2E2564A480A89A9B2D9D788498D6BFEC9BEF60B446CEF00CE5F78C98E697FD73",
-        "contract": "archway1kfh0yaehqzykujjyt9a5j82wx099nu3j3kqzdjjqqdhjmra3r7cqgep5af",
-        "contractMetadata": {
-          "developerAddress": "archway18a698jlmud7a45ldce7k3xxqwf57zdqdrepetx",
-          "rewardAddress": "archway18a698jlmud7a45ldce7k3xxqwf57zdqdrepetx",
-          "collectPremium": true,
-          "premiumPercentage": 10
-        }
-      },
-      {
-        "type": "instantiate",
-        "chainId": "constantine-1",
-        "codeId": 196,
-        "txhash": "64146972E3633B6E570925BE10C53060104AEDF218BE09E537ADC94C3F427E00",
-        "address": "archway1kfh0yaehqzykujjyt9a5j82wx099nu3j3kqzdjjqqdhjmra3r7cqgep5af",
-        "admin": "archway18a698jlmud7a45ldce7k3xxqwf57zdqdrepetx"
-      },
-      {
-        "type": "store",
-        "chainId": "constantine-1",
-        "codeId": 196,
-        "txhash": "7D3614594BCBB4D6F437CCBF2EFF2D509662DAC0CEA854E7BE3589950C4C616A"
-      },
-      {
-        "type": "set-metadata",
-        "chainId": "torii-1",
-        "contract": "archway1w0ah644aayf3w4z9gaycpeqg275q56g6flwhy6p2gm2z7dzx29mqvjrp62",
-        "contractMetadata": {
-          "developerAddress": "archway1a8dq0wced6q29rppdug7yvk8ek0dsrqwe3hxcz",
-          "rewardAddress": "archway1a8dq0wced6q29rppdug7yvk8ek0dsrqwe3hxcz",
-          "collectPremium": true,
-          "premiumPercentage": 10
-        }
-      },
-      {
-        "type": "instantiate",
-        "chainId": "torii-1",
-        "codeId": 49027,
-        "address": "archway1w0ah644aayf3w4z9gaycpeqg275q56g6flwhy6p2gm2z7dzx29mqvjrp62",
-        "admin": "archway1q35c9uzfvwv052m3k4ffv4vmld6n57uqjm0r2t"
-      },
-      {
-        "type": "create",
-        "chainId": "torii-1",
-        "codeId": 49027
-      },
-      {
-        "type": "set-metadata",
-        "chainId": "torii-1",
-        "contract": "archway1s7thmtdklpmums7kcdt2r2jckcd62eqy3ewcxs3atcej0vgs2mwqtvdheu",
-        "contractMetadata": {
-          "developerAddress": "archway1q35c9uzfvwv052m3k4ffv4vmld6n57uqjm0r2t",
-          "rewardAddress": "archway1q35c9uzfvwv052m3k4ffv4vmld6n57uqjm0r2t",
-          "collectPremium": false,
-          "gasRebate": false
-        }
-      },
-      {
-        "type": "instantiate",
-        "chainId": "torii-1",
-        "codeId": 49011,
-        "address": "archway1s7thmtdklpmums7kcdt2r2jckcd62eqy3ewcxs3atcej0vgs2mwqtvdheu",
-        "admin": "archway1q35c9uzfvwv052m3k4ffv4vmld6n57uqjm0r2t"
-      },
-      {
-        "type": "create",
-        "chainId": "torii-1",
-        "codeId": 49011
-      },
-      {
-        "type": "instantiate",
-        "chainId": "torii-1",
-        "codeId": 49001,
-        "address": "archway15qmvwrh2adaty6d4ntek9gtvtzczp0z27qwm7gpg9wsvdr8cre7s5tnp5c",
-        "admin": "archway1q35c9uzfvwv052m3k4ffv4vmld6n57uqjm0r2t"
-      },
-      {
-        "type": "create",
-        "chainId": "torii-1",
-        "codeId": 49001
-      }
-    ]
+    }
   },
   "network": {
     "name": "constantine",
-    "chainId": "constantine-1",
+    "chainId": "constantine-2",
     "type": "testnet",
     "fees": {
       "feeDenom": "uconst"
@@ -110,21 +42,21 @@
     "gas": {
       "prices": "0.002uconst",
       "mode": "auto",
-      "adjustment": "1.3"
+      "adjustment": "1.5"
     },
     "wasm": {
       "bech32Hrp": "archway",
-      "archwayd": "0.0.4",
+      "archwayd": "0.1.0",
       "configDir": ".archway",
       "binary": "archwayd"
     },
     "urls": {
       "rpc": {
-        "url": "https://rpc.constantine-1.archway.tech",
+        "url": "https://rpc.constantine-2.archway.tech",
         "port": 443
       },
       "faucets": [
-        "https://faucet.torii-1.archway.tech"
+        "https://faucet.constantine-2.archway.tech"
       ]
     }
   }

@@ -11,6 +11,10 @@ Implements:
 - [x] Metadata extension
 - [x] Enumerable extension
 
+## Instantiate
+minter - marketplace contract
+{"minter":"archway1dqucfnmr9ew8xu9cdnce7jvcnhqheh3z4qtatw4kq08t4ytden8syapcfg", "name":"Wotori Studio", "symbol":"Wotori Studio"}
+
 ## Implementation
 
 The `ExecuteMsg` and `QueryMsg` implementations follow the [CW721 spec](../../packages/cw721/README.md) and are described there.

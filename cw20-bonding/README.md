@@ -9,6 +9,44 @@ This serves three purposes:
 * A demonstration of how to extend `cw20-base` to add extra functionality
 * A demonstration of the [Receiver interface]([Basic CW20 interface](../../packages/cw20/README.md#receiver))
 
+## Instantiate
+```
+{
+  "curve_type": {
+    "linear": {
+      "scale": 1,
+      "slope": "1000"
+    }
+  },
+  "decimals": 6,
+  "name": "Wrapped NFT Token",
+  "reserve_decimals": 6,
+  "reserve_denom": "uconst",
+  "symbol": "WNFT"
+}
+```
+
+{"curve_type": {"linear": {"scale": 1, "slope": "1000"} }, "decimals": 6, "name": "Wrapped NFT Token", "reserve_decimals": 6, "reserve_denom": "uconst", "symbol": "WNFT"}
+
+// 1000 per 1 original token
+```
+{
+  "curve_type": {
+    "constant": {
+      "value": "1",
+      "scale": 3
+    }
+  },
+  "decimals": 6,
+  "name": "Wrapped NFT Token",
+  "reserve_decimals": 6,
+  "reserve_denom": "uconst",
+  "symbol": "WNFT"
+}
+```
+{"curve_type": {"constant": {"value": "1", "scale": 3 } }, "decimals": 6, "name": "Wrapped NFT Token", "reserve_decimals": 6, "reserve_denom": "uconst", "symbol": "WNFT"}
+
+
 ## Design
 
 There are two variants - accepting native tokens and accepting cw20 tokens

@@ -14,3 +14,10 @@ cw-marketplace
 ---
 The [fork](https://github.com/wotori-studio/cw-marketplace) from original authors with updated dependencies.
 cw-marketplace also copied here for future updates in conjunction with other contracts.
+
+# How to
+setup NFT marketplace
+1st - deploy cw-marketplace
+2nd - deploy cw721 as a comunity contract with marketplace as admin
+3rd - deploy cw20
+4th - deploy [instantiator](https://github.com/wotori/instantiator)

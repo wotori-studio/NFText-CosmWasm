@@ -2,9 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "OfferingsResponse",
   "type": "object",
-  "required": [
-    "offerings"
-  ],
+  "required": ["offerings"],
   "properties": {
     "offerings": {
       "type": "array",
@@ -20,10 +18,7 @@
     },
     "Cw20Coin": {
       "type": "object",
-      "required": [
-        "address",
-        "amount"
-      ],
+      "required": ["address", "amount"],
       "properties": {
         "address": {
           "type": "string"
@@ -35,13 +30,7 @@
     },
     "QueryOfferingsResult": {
       "type": "object",
-      "required": [
-        "contract_addr",
-        "id",
-        "list_price",
-        "seller",
-        "token_id"
-      ],
+      "required": ["contract_addr", "id", "list_price", "seller", "token_id"],
       "properties": {
         "contract_addr": {
           "$ref": "#/definitions/Addr"
