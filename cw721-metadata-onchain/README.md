@@ -13,9 +13,11 @@ In particular, here we define:
 #### instantiate message
 `{"minter":"archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9", "name":"test", "symbol":"test"}`
 #### Mint 
-archway tx --args '{"mint":{"owner":"archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9", "token_id":"2"}}'
+archway tx --args '{"mint":{"owner":"archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9", "token_id":"2", "name": "test"}}'
 
-#### metadata example
+archway tx --args '{"mint": {"owner": "archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9", "token_id": "4", "extension": {"content_ipfs_link": "Qm...", "content_type": "image/jpeg", "description": "Hello, World!", "title": "test", "tags": ["test", "tag"], "license": "CC BY-SA 4.0", "original_minter": "archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9", "based_on": [["https://example.com/image.jpg", "image/jpeg"] ] } } }'
+
+#### mint metadata example
 ```json
 {
     "mint":
@@ -46,7 +48,17 @@ archway tx --args '{"mint":{"owner":"archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vau
     }
 }
 ```
+## Query
+smart contract owner - archway1jyua6mer0pvykzr7u3nm6wa5pmf7ep4q0v83z6c0g0ns84st5rtsfkgl5m
+`archway query contract-state smart --args '{"minter": {}}'`
+`archway query contract-state smart --args '{"contract_info": {}}'`
+query metadata: `archway query contract-state smart --args '{"nft_info": {"token_id": "2"}}'`
+query metadata: `archway query contract-state smart --args '{"all_nft_info": {"token_id": "2"}}'`
+query owners: `archway query contract-state smart --args '{"tokens": {"owner": "archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9"}}'`
+              `archway query contract-state smart --args '{"all_tokens": {}}'`
 
+this most important query does not work at the moment:
+query by metadata: `archway query contract-state smart --args '{"extension": {"msg": {"content_type": "image/png"}}}'`
 
 ```rust
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
