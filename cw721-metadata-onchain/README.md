@@ -9,6 +9,9 @@ available in all queries.
 
 In particular, here we define:
 
+## instantiate message
+`{"minter":"archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9", "name":"test", "symbol":"test"}`
+
 ```rust
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Trait {

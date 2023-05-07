@@ -1,9 +1,28 @@
 {
-  "name": "archway-meta-onchain",
+  "useTemplate": false,
+  "name": "cw721-metadata-on-chain",
   "developer": {
     "archwayd": {
-      "docker": true
+      "docker": false
     },
+    "deployments": [
+      {
+        "project": "cw721-metadata-onchain",
+        "type": "instantiate",
+        "chainId": "constantine-2",
+        "codeId": 862,
+        "txhash": "A799AF261C813017F29A24409AA085FBC11637815E49BDA7AB070C1665FFA0F5",
+        "address": "archway1jyua6mer0pvykzr7u3nm6wa5pmf7ep4q0v83z6c0g0ns84st5rtsfkgl5m",
+        "admin": "archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9"
+      },
+      {
+        "project": "cw721-metadata-onchain",
+        "type": "store",
+        "chainId": "constantine-2",
+        "codeId": 862,
+        "txhash": "3F3FBC6370C15E2393B504B5C0A4F49CFF5301F08CB2DFF7492785003FCEEDE6"
+      }
+    ],
     "scripts": {
       "test": "cargo unit-test",
       "build": "cargo build",
@@ -11,36 +30,11 @@
       "wasm": "cargo wasm",
       "query": "archwayd query wasm",
       "tx": "archwayd tx wasm execute"
-    },
-    "deployments": [
-      {
-        "type": "set-metadata",
-        "chainId": "constantine-1",
-        "contract": "archway1snu65x9p8wa6yn20cn5j2vpsxpqa7flmhj4k0k95aujgga234k5q28p90y",
-        "contractMetadata": {
-          "developerAddress": "archway1a8dq0wced6q29rppdug7yvk8ek0dsrqwe3hxcz",
-          "rewardAddress": "archway1a8dq0wced6q29rppdug7yvk8ek0dsrqwe3hxcz",
-          "collectPremium": false,
-          "gasRebate": false
-        }
-      },
-      {
-        "type": "instantiate",
-        "chainId": "constantine-1",
-        "codeId": 85,
-        "address": "archway1snu65x9p8wa6yn20cn5j2vpsxpqa7flmhj4k0k95aujgga234k5q28p90y",
-        "admin": "archway1c00s7tz2ws5qdl409xncya6d3fj79fr0a3sjnv"
-      },
-      {
-        "type": "create",
-        "chainId": "constantine-1",
-        "codeId": 85
-      }
-    ]
+    }
   },
   "network": {
     "name": "constantine",
-    "chainId": "constantine-1",
+    "chainId": "constantine-2",
     "type": "testnet",
     "fees": {
       "feeDenom": "uconst"
@@ -48,21 +42,21 @@
     "gas": {
       "prices": "0.002uconst",
       "mode": "auto",
-      "adjustment": "1.3"
+      "adjustment": "1.5"
     },
     "wasm": {
       "bech32Hrp": "archway",
-      "archwayd": "0.0.4",
+      "archwayd": "0.1.0",
       "configDir": ".archway",
       "binary": "archwayd"
     },
     "urls": {
       "rpc": {
-        "url": "https://rpc.constantine-1.archway.tech",
+        "url": "https://rpc.constantine-2.archway.tech",
         "port": 443
       },
       "faucets": [
-        "https://faucet.constantine-1.archway.tech"
+        "https://faucet.constantine-2.archway.tech"
       ]
     }
   }
