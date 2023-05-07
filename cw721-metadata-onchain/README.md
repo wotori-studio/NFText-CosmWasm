@@ -9,8 +9,44 @@ available in all queries.
 
 In particular, here we define:
 
-## instantiate message
+## Messages
+#### instantiate message
 `{"minter":"archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9", "name":"test", "symbol":"test"}`
+#### Mint 
+archway tx --args '{"mint":{"owner":"archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9", "token_id":"2"}}'
+
+#### metadata example
+```json
+{
+    "mint":
+    {
+        "owner": "archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9",
+        "token_id": "2",
+        "extension":
+        {
+            "content_ipfs_link": "Qm...",
+            "content_type": "image/png",
+            "description": "A beautiful landscape",
+            "title": "Landscape",
+            "tags":
+            [
+                "landscape",
+                "nature"
+            ],
+            "license": "CC BY-SA 4.0",
+            "original_minter": "archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9",
+            "based_on":
+            [
+                [
+                    "https://example.com/image.jpg",
+                    "image/jpeg"
+                ]
+            ]
+        }
+    }
+}
+```
+
 
 ```rust
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
