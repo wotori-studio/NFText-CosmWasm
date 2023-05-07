@@ -17,16 +17,16 @@ pub struct Trait {
 #[cw_serde]
 #[derive(Default)]
 pub struct Metadata {
-    pub image: Option<String>,
-    pub image_data: Option<String>,
-    pub external_url: Option<String>,
+    pub content_ipfs_link: Option<String>,
+    pub content_type: Option<String>,
     pub description: Option<String>,
-    pub name: Option<String>,
-    pub attributes: Option<Vec<Trait>>,
-    pub background_color: Option<String>,
-    pub animation_url: Option<String>,
-    pub youtube_url: Option<String>,
+    pub title: Option<String>,
+    pub tags: Option<Vec<String>>,
+    pub license: Option<String>,
+    pub original_minter: Option<String>,
+    pub based_on: Option<Vec<(String, String)>>,
 }
+
 
 pub type Extension = Option<Metadata>;
 
@@ -121,7 +121,7 @@ mod tests {
         let token_uri = Some("https://starships.example.com/Starship/Enterprise.json".into());
         let extension = Some(Metadata {
             description: Some("Spaceship with Warp Drive".into()),
-            name: Some("Starship USS Enterprise".to_string()),
+            title: Some("Starship USS Enterprise".to_string()),
             ..Metadata::default()
         });
         let exec_msg = ExecuteMsg::Mint {

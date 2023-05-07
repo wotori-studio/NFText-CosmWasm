@@ -1,0 +1,1 @@
+85cc316a7fa0be150f9324354748bddecb535a30810564e5384dba866603fca3  cw721_metadata_onchain-aarch64.wasm
