@@ -13,7 +13,7 @@ Implements:
 
 ## Instantiate
 minter - marketplace contract
-{"minter":"archway1dqucfnmr9ew8xu9cdnce7jvcnhqheh3z4qtatw4kq08t4ytden8syapcfg", "name":"Wotori Studio", "symbol":"Wotori Studio"}
+{"minter":"archway1mge3nc037j8vkf90fw5055mj47mmnj4y70waxhwmq8dj96fhyvvsvxvhr0", "name":"Wotori Studio", "symbol":"Wotori Studio"}
 
 ## Implementation
 

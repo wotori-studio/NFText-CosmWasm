@@ -26,7 +26,7 @@ This serves three purposes:
 }
 ```
 
-{"curve_type": {"linear": {"scale": 1, "slope": "1000"} }, "decimals": 6, "name": "Wrapped NFT Token", "reserve_decimals": 6, "reserve_denom": "uconst", "symbol": "WNFT"}
+{"curve_type": {"linear": {"scale": 1, "slope": "1000"} }, "decimals": 18, "name": "Wrapped NFT Token", "reserve_decimals": 18, "reserve_denom": "aconst", "symbol": "WNFT"}
 
 // 1000 per 1 original token
 ```

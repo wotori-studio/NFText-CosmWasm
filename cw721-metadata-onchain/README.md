@@ -60,6 +60,10 @@ query owners: `archway query contract-state smart --args '{"tokens": {"owner": "
 this most important query does not work at the moment:
 query by metadata: `archway query contract-state smart --args '{"extension": {"msg": {"content_type": "image/png"}}}'`
 
+"archway1jyua6mer0pvykzr7u3nm6wa5pmf7ep4q0v83z6c0g0ns84st5rtsfkgl5m"
+`archway query contract-state smart  --args '{"extension": {"msg": {"content_type": "image/png"}}}'`
+
+
 ```rust
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 pub struct Trait {

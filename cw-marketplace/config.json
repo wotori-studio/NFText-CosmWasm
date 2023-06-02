@@ -9,18 +9,18 @@
       {
         "project": "nftext_manager",
         "type": "instantiate",
-        "chainId": "constantine-2",
-        "codeId": 661,
-        "txhash": "EEFFABF4C844398DFB25E3CD9B689DC4096A0FDEA747A62332FD87133B194F96",
-        "address": "archway1dqucfnmr9ew8xu9cdnce7jvcnhqheh3z4qtatw4kq08t4ytden8syapcfg",
-        "admin": "archway1qq65wjefu6nnqx0n6vvx5xzz3xmcuy75vauhq9"
+        "chainId": "constantine-3",
+        "codeId": 93,
+        "txhash": "6EDE2A7783931F2DFE0FFBAF16FFE88052C868C84FE303F1D538E3BDB27D21DA",
+        "address": "archway1mge3nc037j8vkf90fw5055mj47mmnj4y70waxhwmq8dj96fhyvvsvxvhr0",
+        "admin": "archway1uwew6p8k70xa2lkzeujqcw430uky49zthsvc0y"
       },
       {
         "project": "nftext_manager",
         "type": "store",
-        "chainId": "constantine-2",
-        "codeId": 661,
-        "txhash": "8211C293B4607B988EE99B11F15AD929C23850ED30DA974271417667686FC053"
+        "chainId": "constantine-3",
+        "codeId": 93,
+        "txhash": "9179DD72FD946CAF97A96B64930420871388F939DD2EFD1E6BA511060671CC5A"
       }
     ],
     "scripts": {
@@ -34,13 +34,13 @@
   },
   "network": {
     "name": "constantine",
-    "chainId": "constantine-2",
+    "chainId": "constantine-3",
     "type": "testnet",
     "fees": {
-      "feeDenom": "uconst"
+      "feeDenom": "aconst"
     },
     "gas": {
-      "prices": "0.002uconst",
+      "prices": "1aconst",
       "mode": "auto",
       "adjustment": "1.5"
     },
@@ -52,11 +52,11 @@
     },
     "urls": {
       "rpc": {
-        "url": "https://rpc.constantine-2.archway.tech",
+        "url": "https://rpc.constantine.archway.tech",
         "port": 443
       },
       "faucets": [
-        "https://faucet.constantine-2.archway.tech"
+        "https://faucet.constantine.archway.tech"
       ]
     }
   }
